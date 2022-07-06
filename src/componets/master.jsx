@@ -3,6 +3,8 @@ import Part_1 from './part';
 import Part_2 from './part_2';
 import Part_3 from './part_3';
 function Masterpages() {
+
+ 
     return ( 
         <React.Fragment>
             <div className='page container'>
