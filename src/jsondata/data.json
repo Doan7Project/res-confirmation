@@ -1,0 +1,42 @@
+{
+    "Confirmation": [
+        {
+            "bookingID": 1,
+            "logo":null,
+            "hotelName":null,
+            "guestName":null,
+            "email":null,
+            "phone":null,
+            "bookingNumber":null,
+            "received":null,
+            "arrivalDate":null,
+            "departureDate":null,
+            "lengthofStay":null,
+            "totalGuest":null,
+            "totalUnit":null,
+            "totalPrice":null,
+            "notePad":null,
+            "amendment":null,
+            "roomDetail":[
+                {
+                    "roomId":1,
+                    "roomType":null,
+                    "roomRate":null,
+                    "arrivaRoomlDate":null,
+                    "departureRoomDate":null,
+                    "lengthRoomofStay":null,
+                    "bookRoomOccupancy":null,
+                    "maxRoomOccupancy":null,
+                    "mealOption":null,
+                    "subTotal":null,
+                    "totalRoomPrice":null,
+                    "rateRoomIncluded":null
+                }
+            ],
+            "policy":[
+
+
+            ]
+        }
+    ]
+}
