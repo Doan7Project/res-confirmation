@@ -13,7 +13,7 @@ function Part_1() {
             {
                 Datajson.Confirmation.map((e,i) => {
                     return (
-                        <div key={e.bookingID}>
+                        <div key={i}>
                             <div className='text-center' >
                                 <img src={Logo} alt="Logo" width='80' />
                             </div>

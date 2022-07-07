@@ -1,6 +1,13 @@
 import React, { Component } from 'react'
 import Datajson from '../jsondata/data.json'
 function Part_2() {
+
+    const totalAmount = Datajson.Confirmation.map(function(a){
+        return(
+
+            a.roomDetail.reduce((totalAmount, currentItem)=> totalAmount=totalAmount+ currentItem.subTotal,0))
+
+    })
     return (
 
         <div>
@@ -22,24 +29,24 @@ function Part_2() {
                                         <span className='txtsize fw-bolder'>Length of stay</span>
                                         <p className=' txtsize'>{e.lengthofStay}</p>
                                     </div>
-                                
+
                                     <div>
-                                    {
-                                        e.totalGuest.map(function(f,i){
-                                            return(
-                                                <div>
-                                                      <span className='txtsize fw-bolder'>Total Guest</span>
-                                                <p className='txtsize'>Adults: <span>{f.adult}</span>
-                                                    <br />Children under 6: <span>{f.childrenUnder}</span>
-                                                    <br />Children 6-11: <span>{f.childrenFrom}</span>
-                                                    <br />Children Over 11: <span>{f.childrenOver}</span>
-                                                </p>
-                                                </div>
-                                              
-                                            )
-                                        })
-                                    }
-                                   
+                                        {
+                                            e.totalGuest.map(function (f, i) {
+                                                return (
+                                                    <div key={i}>
+                                                        <span className='txtsize fw-bolder'>Total Guest</span>
+                                                        <p className='txtsize'>Adults: <span>{f.adult}</span>
+                                                            <br />Children under 6: <span>{f.childrenUnder}</span>
+                                                            <br />Children 6-11: <span>{f.childrenFrom}</span>
+                                                            <br />Children Over 11: <span>{f.childrenOver}</span>
+                                                        </p>
+                                                    </div>
+
+                                                )
+                                            })
+                                        }
+
                                     </div>
                                     <div >
                                         <span className='txtsize fw-bolder'>Total Unit</span>
@@ -94,7 +101,7 @@ function Part_2() {
                                     </div>
                                     <div>
                                         <span className='fw-bolder'>Total Amount</span><br />
-                                        <span className='text-danger fs-5 fw-bolder'>VND {e.totalAmount}</span>
+                                        <span className='text-danger fs-5 fw-bolder'>VND {totalAmount}</span>
                                         <p className='txtsize'>(Included: 8% VAT & Service charge)</p>
                                     </div>
                                 </div>
